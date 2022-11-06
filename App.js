@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { geriSayımİşlevi } from "./anaİşlev";
 import Seçici from "./Seçici";
-import Tutucu from "./Tutucu";
 
 const varsayılanKalanZaman = {
   saniye: "2",
@@ -17,6 +16,7 @@ export default function App() {
   useEffect(() => {
     const ıntervalId = setInterval(() => {
       güncelleKalanZamanı(zamanSalise);
+      console.log("this is repeder fuctions");
     }, 1000);
 
     return () => {
@@ -27,6 +27,7 @@ export default function App() {
   function güncelleKalanZamanı(budanGeriSay) {
     setKalanZaman(geriSayımİşlevi(budanGeriSay));
   }
+
   return (
     <View className="h-screen justify-center pl-24 ">
       {/* <Text className="text-left text-3xl font-bold">
@@ -61,13 +62,7 @@ export default function App() {
         </View>
         <Text>saniye</Text>
       </Text> */}
-      {/* <Tutucu /> */}
       <Seçici />
     </View>
   );
 }
-const styles = StyleSheet.create({
-  container: {
-    width: 2,
-  },
-});
