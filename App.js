@@ -29,7 +29,7 @@ export default function App() {
   }
   return (
     <View className="h-screen justify-center pl-24 ">
-      <Text className="text-left text-3xl font-bold">
+      {/* <Text className="text-left text-3xl font-bold">
         <View>
           <Text className="text-left text-3xl font-bold w-10">
             {kalanZaman.gün}
@@ -60,7 +60,7 @@ export default function App() {
           </Text>
         </View>
         <Text>saniye</Text>
-      </Text>
+      </Text> */}
       {/* <Tutucu /> */}
       <Seçici />
     </View>
